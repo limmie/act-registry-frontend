@@ -30,7 +30,7 @@ export default {
         component: "fa",
         suffix: true,
         icons: {
-          solid: ["faSearch"],
+          solid: ["faSearch", "faHeart"],
         },
       },
     ],

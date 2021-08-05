@@ -3,3 +3,50 @@
 
 @mixin Montserrat
   font-family: Montserrat, Arial, sans-serif
+
+
+@mixin flex($direction, $justify-content, $align-items)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify-content
+  align-items: $align-items
+
+@mixin grid($columns, $rows)
+  display: grid
+  grid-template-columns: $columns
+  grid-template-rows: $rows
+
+@mixin container($width)
+  max-width: $width
+  margin: 0 auto
+
+@mixin fitImage($position, $fit)
+  width: 100%
+  height: 100%
+  object-position: $position
+  object-fit: $fit
+
+@mixin defaultPadding
+  padding: 0.6rem 1rem
+
+@mixin removeDefault
+  background-color: unset
+  border: unset
+
+@mixin defaultTransition
+  transition: 0.1s all
+
+@mixin defaultHover
+  cursor: pointer
+  opacity: 1
+  @include defaultTransition
+  &:hover
+    opacity: 0.7
+    @include defaultTransition
+
+@mixin defaultBorder
+  border: 1px solid $borderColor
+  border-radius: 5px
+
+@mixin defaultBackgroundColor
+  background-color: $backgroundColor

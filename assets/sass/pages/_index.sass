@@ -1,0 +1,65 @@
+#index-wrapper
+  @include grid(10fr 4fr, auto)
+  align-items: flex-start
+  gap: 1rem
+
+#index-content
+  @include flex(column, flex-start, stretch)
+  gap: 1rem
+
+.index-section
+  background-color: $whiteColor
+  @include defaultBorder
+  padding: 1rem
+
+  h1, h2, h3, h4, h5, h6, p
+    margin-bottom: 1rem
+
+  p
+    letter-spacing: 0.3px
+
+  a
+    color: $secondaryColor
+    @include defaultHover
+
+#index-sidebar
+  @extend #index-content
+
+.index-sidebar-section
+  @extend .index-section
+
+.index-sidebar-content-buttons
+  @include flex(column, flex-start, stretch)
+  gap: 1rem
+
+.index-sidebar-content-button
+  padding: 1rem
+
+#index-sidebar-nav
+  @include flex(column, flex-start, stretch)
+  gap: 0.5rem
+
+.index-information-block
+  border-top: 2px solid $borderColor
+  padding: 1rem 0
+  @include defaultHover
+
+  &:last-child
+    border-bottom: 2px solid $borderColor
+
+  div, p, h3
+    pointer-events: none
+
+.index-information-block-content
+  max-height: 0
+  overflow: hidden
+  transition: all 0.2s
+
+  &.is-active
+    display: block
+    margin-top: 0.5rem
+
+
+h3.index-information-block-title
+  margin-bottom: 0
+  color: $secondaryColor

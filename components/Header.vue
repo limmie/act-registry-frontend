@@ -2,9 +2,11 @@
   <header>
     <div class="container">
       <div id="header">
-        <div id="header-logo">
-          <img src="" alt="" />
-        </div>
+        <nuxt-link to="/">
+          <div id="header-logo">
+            <img src="~/assets/images/logos/default-logo.png" alt="" />
+          </div>
+        </nuxt-link>
 
         <div id="header-search">
           <input
@@ -17,12 +19,23 @@
           </div>
         </div>
 
-        <div id="header-panel">
-          <div class="default-button">
-            <span>{{ $t("sign.in") }}</span>
+        <div id="header-nav">
+          <div class="header-nav-item">
+            <nuxt-link to="/blog">{{ $t("blog") }}</nuxt-link>
           </div>
-          <div class="alt-button">
-            <span>{{ $t("sign.out") }}</span>
+          <div class="header-nav-item">
+            <nuxt-link to="/blog">{{ $t("questionsAndAnswers") }}</nuxt-link>
+          </div>
+          <div class="header-nav-item">
+            <div class="alt-button">
+              <span>{{ $t("sign.in") }}</span>
+            </div>
+          </div>
+
+          <div class="header-nav-item">
+            <div class="default-button">
+              <span>{{ $t("sign.up") }}</span>
+            </div>
           </div>
         </div>
       </div>

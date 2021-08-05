@@ -1,0 +1,28 @@
+input, textarea, select, button
+  @include removeDefault
+  @include Roboto
+
+.default-button
+  @include flex(row, center, center)
+  @include defaultHover
+  background-color: $secondaryColor
+  color: $whiteColor
+  padding: 0.4rem 1rem
+  border-radius: 5px
+  border: 2px solid $secondaryColor
+
+.alt-button
+  @extend .default-button
+  background-color: $whiteColor
+  color: $secondaryColor
+  border: 2px solid $secondaryColor
+
+.secondary-button
+  @extend .default-button
+  background-color: $primaryColor
+  border-color: $primaryColor
+
+.secondary-alt-button
+  @extend .alt-button
+  color: $primaryColor
+  border: 2px solid $primaryColor

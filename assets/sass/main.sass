@@ -1,6 +1,17 @@
 /* CONFIG */
+@import './config/variables'
 @import './config/fonts'
 @import './config/mixins'
+
+/* BASE */
+@import './base/forms'
+
+/* COMPONENTS */
+@import './components/header'
+@import './components/footer'
+
+/* PAGES */
+@import './pages/index'
 
 *
   margin: 0
@@ -8,9 +19,23 @@
   box-sizing: border-box
   outline: none
 
-p, span
+html
+  scroll-behavior: smooth
+
+body
   @include Roboto
 
 h1, h2 ,h3, h4 ,h5, h6
   @include Montserrat
 
+.container
+  @include container(1200px)
+
+a
+  text-decoration: none
+  color: $textColor
+
+main
+  padding-top: 1rem
+  background-color: $backgroundColor
+  min-height: 100vh

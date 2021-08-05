@@ -1,7 +1,9 @@
 module.exports = {
   sign: {
     in: "Sign in",
-    out: "Sign out",
+    up: "Sign out",
   },
   search: "Search",
+  questionsAndAnswers: "Q&A",
+  blog: "Blog",
 };
