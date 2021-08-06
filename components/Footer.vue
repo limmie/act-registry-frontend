@@ -7,7 +7,7 @@
         </div>
 
         <div id="footer-slogan">
-          <h4>Our love story begins from here</h4>
+          <h4>Some slogan goes here</h4>
         </div>
 
         <div id="footer-nav">
