@@ -1,0 +1,25 @@
+#admin-sidebar
+    position: fixed
+    top: 0
+    bottom: 0
+    box-shadow: 0 5px 5px #ccc
+
+.sidebar-logo
+    width: 280px
+    img
+        @include fitImage(center, contain)
+
+.sidebar-nav
+    font-weight: bold
+    text-align: center
+    padding-top: 30px
+
+.sidebar-nav-item
+    width: 100%
+    padding: 10px
+    background: $whiteColor
+    opacity: 0.8
+    cursor: pointer
+
+    &:hover
+        background: $backgroundColor
