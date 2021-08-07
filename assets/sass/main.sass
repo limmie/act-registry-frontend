@@ -5,13 +5,22 @@
 
 /* BASE */
 @import './base/forms'
+@import './base/tables.sass'
 
 /* COMPONENTS */
 @import './components/header'
 @import './components/footer'
+@import './components/AdminHeader'
 
 /* PAGES */
 @import './pages/index'
+@import './pages/admin/login.sass'
+@import './pages/admin/hospitals/hospitals.sass'
+@import './pages/admin/admin-sidebar'
+@import './pages/parent/register.sass'
+
+/* LAYOUTS */
+@import './layouts/admin'
 
 *
   margin: 0
@@ -24,6 +33,7 @@ html
 
 body
   @include Roboto
+  font-size: 16px
 
 h1, h2 ,h3, h4 ,h5, h6
   @include Montserrat
@@ -39,3 +49,6 @@ main
   padding-top: 1rem
   background-color: $backgroundColor
   min-height: 100vh
+
+.rotate
+  transform: rotate(180deg)

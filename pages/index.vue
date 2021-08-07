@@ -32,7 +32,7 @@
                 @click="toggleBlock"
                 :data-block-index="index"
               >
-                <h3 class="index-information-block-title">{{ block.title }}</h3>
+                <h3 class="index-information-block-title">{{ block.title }}<fa-icon :icon="['fas', 'angle-down']" :class="block.active ? 'rotate' : null" /></h3>
 
                 <div
                   class="index-information-block-content"

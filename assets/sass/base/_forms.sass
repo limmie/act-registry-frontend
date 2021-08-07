@@ -1,6 +1,7 @@
 input, textarea, select, button
   @include removeDefault
   @include Roboto
+  font-size: 16px
 
 .default-button
   @include flex(row, center, center)
@@ -26,3 +27,14 @@ input, textarea, select, button
   @extend .alt-button
   color: $primaryColor
   border: 2px solid $primaryColor
+
+.default-input
+  width: 100%
+  label
+    display: block
+    margin-bottom: 0.2rem
+  input
+    width: 100%
+    @include defaultPadding
+    background-color: $whiteColor
+    border-radius: 5px
