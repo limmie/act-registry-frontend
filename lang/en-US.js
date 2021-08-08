@@ -1,9 +1,20 @@
 module.exports = {
-  sign: {
-    in: "Sign in",
-    up: "Sign up",
-  },
   search: "Search",
   questionsAndAnswers: "Q&A",
   blog: "Blog",
+  login: "Login",
+  register: "Register",
+  welcomeBack: "Welcome back",
+  name: "Name",
+  username: "Username",
+  password: "Password",
+  email: "Email",
+  civils: "Civils",
+  registerNewborn: "Register newborn",
+  parentRegister: "Parent register",
+  login: "Login",
+  register: "Register",
+  parentLogin: "Parent login",
+  firstName: "First name",
+  lastName: "Last name"
 };

@@ -27,9 +27,11 @@
             <nuxt-link to="/blog">{{ $t("questionsAndAnswers") }}</nuxt-link>
           </div>
           <div class="header-nav-item">
-            <div class="alt-button">
-              <span>{{ $t("sign.in") }}</span>
-            </div>
+            <nuxt-link to="/parent/login">
+              <div class="alt-button">
+                <span>{{ $t("sign.in") }}</span>
+              </div>
+            </nuxt-link>
           </div>
 
           <div class="header-nav-item">

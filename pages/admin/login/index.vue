@@ -1,41 +1,64 @@
 <template>
-    <div class="admin-login">
-        <div class="container">
-            <form @submit.prevent="login" class="login-form">
-
-                <h1 class="admin-title">Welcome back</h1>
-                <div class="default-input login-input">
-                    <label for="username">Name</label>
-                    <input type="text" v-model="admin.username">
-                </div>
-                 <div class="default-input login-input">
-                    <label for="password">Password</label>
-                    <input type="password" v-model="admin.password">
-                </div>
-                <button type="submit" class="secondary-button login-btn">Login</button>
-
-            </form>
+  <div class="admin-login">
+    <div class="container">
+      <form @submit.prevent="login" class="login-form">
+        <h1 class="admin-title">Welcome back</h1>
+        <div class="default-input login-input">
+          <label for="username">{{ $t("username") }}</label>
+          <input type="text" v-model="admin.username" />
         </div>
+        <div class="default-input login-input">
+          <label for="password">{{ $t("password") }}</label>
+          <input type="password" v-model="admin.password" />
+        </div>
+        <button type="submit" class="secondary-button login-btn">
+          {{ $t("login") }}
+        </button>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        layout: "empty",
+import Alert from "../../../components/Alert.vue";
 
-        data() {
-            return {
-                admin: {
-                    username: '',
-                    password: ''
-                }
-            }
-        },
+import { isEmpty } from "validator";
 
-        methods: {
-            login() {
-                console.log(this.admin.username);
-            }
-        }
+export default {
+  layout: "empty",
+
+  components: {
+    Alert
+  },
+
+  data() {
+    return {
+      admin: {
+        username: "",
+        password: ""
+      }
+    };
+  },
+
+  methods: {
+    async login() {
+      try {
+        await this.validateAdmin();
+        const { data } = await this.$axios.post(`/admin/login`, this.admin);
+      } catch (err) {
+        this.$toast.error(err);
+      }
+    },
+
+    async validateAdmin() {
+      if (isEmpty(this.admin.username)) {
+        throw new Error("Admin username is required");
+      }
+
+      if (isEmpty(this.admin.password)) {
+        throw new Error("Admin password is required");
+      }
     }
+  }
+};
 </script>

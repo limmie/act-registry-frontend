@@ -37,6 +37,7 @@ export default {
   ],
 
   modules: [
+    '@nuxtjs/toast',
     "@nuxtjs/axios",
     "@nuxtjs/pwa",
     [
@@ -64,7 +65,14 @@ export default {
     ],
   ],
 
-  axios: {},
+  toast: {
+    position: 'bottom-right',
+    duration: 5000
+},
+
+  axios: {
+    baseURL: process.env.SERVER_URL || 'http://localhost:3000'
+  },
 
   pwa: {
     manifest: {

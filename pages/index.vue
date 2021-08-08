@@ -32,7 +32,13 @@
                 @click="toggleBlock"
                 :data-block-index="index"
               >
-                <h3 class="index-information-block-title">{{ block.title }}<fa-icon :icon="['fas', 'angle-down']" :class="block.active ? 'rotate' : null" /></h3>
+                <h3 class="index-information-block-title">
+                  {{ block.title
+                  }}<fa-icon
+                    :icon="['fas', 'angle-down']"
+                    :class="block.active ? 'rotate' : null"
+                  />
+                </h3>
 
                 <div
                   class="index-information-block-content"
@@ -45,7 +51,7 @@
         </div>
 
         <div id="index-sidebar">
-          <div class="index-sidebar-section">
+          <!-- <div class="index-sidebar-section">
             <div class="index-sidebar-content-buttons">
               <div class="secondary-button index-sidebar-content-button">
                 <span>Получить услугу онлайн</span>
@@ -55,7 +61,7 @@
                 <span>Запись на прием</span>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="index-sidebar-section">
             <h3>Useful links</h3>
             <div id="index-sidebar-nav">
@@ -82,12 +88,12 @@ export default {
         {
           title: "Полное название услуги",
           text: "Государственная регистрация заключения брака",
-          active: false,
+          active: false
         },
         {
           title: "Кто может обратиться за услугой:",
           text: "Гражданин Российской Федерации с 18 лет.",
-          active: false,
+          active: false
         },
         {
           title: "Перечень необходимых сведений:",
@@ -97,24 +103,26 @@ export default {
             "<li>Сведения о предыдущем браке, если заявитель ранее состоял (состояла) в браке;</li>" +
             "<li>Сведения об оплате государственной пошлины.</li>" +
             "</ul>",
-          active: false,
+          active: false
         },
         {
           title: "Стоимость услуги и порядок оплаты:",
-          text: "Госпошлина за регистрацию заключения брака - 350 руб. Если оплата госпошлины осуществляется одновременно с подачей заявления в электронном виде, то действует скидка 30% (согласно требованиям ФЗ 30.11.2016 г. № 402-ФЗ «О внесении изменения в статью 333-35 части второй Налогового кодекса Российской Федерации».",
-          active: false,
+          text:
+            "Госпошлина за регистрацию заключения брака - 350 руб. Если оплата госпошлины осуществляется одновременно с подачей заявления в электронном виде, то действует скидка 30% (согласно требованиям ФЗ 30.11.2016 г. № 402-ФЗ «О внесении изменения в статью 333-35 части второй Налогового кодекса Российской Федерации».",
+          active: false
         },
         {
           title: "Сроки предоставления услуги",
-          text: "Подача заявления на регистрацию брака осуществляется в режиме онлайн.",
-          active: false,
+          text:
+            "Подача заявления на регистрацию брака осуществляется в режиме онлайн.",
+          active: false
         },
         {
           title: "Результат оказания услуги",
           text: "Запись на регистрацию бракосочетания.",
-          active: false,
-        },
-      ],
+          active: false
+        }
+      ]
     };
   },
 
@@ -126,9 +134,9 @@ export default {
         { name: "Порядок обжалования", link: "/" },
         { name: "Нормативные акты", link: "/" },
         { name: "Причины отказа", link: "/" },
-        { name: "Порядок обжалования", link: "/" },
+        { name: "Порядок обжалования", link: "/" }
       ];
-    },
+    }
   },
 
   methods: {
@@ -143,7 +151,7 @@ export default {
         : (child.style.maxHeight = child.scrollHeight + "px");
 
       this.blocks[blockIndex].active = !this.blocks[blockIndex].active;
-    },
-  },
+    }
+  }
 };
 </script>

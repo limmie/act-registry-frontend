@@ -1,0 +1,22 @@
+.alert-wrapper
+    width: 100%
+
+.info-alert
+    margin: 0.4rem 0
+    padding: 0.4rem 1rem
+    border-radius: 5px
+    background-color: $infoColor
+    color: $whiteColor
+
+.error-alert
+    @extend .info-alert
+    background-color: $dangerColor
+
+.warning-alert
+    @extend .info-alert
+    background-color: $warningColor
+
+.success-alert
+    @extend .info-alert
+    background-color: $successColor
+
