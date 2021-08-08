@@ -45,7 +45,21 @@ export default {
       try {
         await this.validateAdmin();
         const { data } = await this.$axios.post(`/admin/login`, this.admin);
+        const { admin } = data;
+        await this.$auth.loginWith("local", {
+          data: {
+            username: this.admin.username,
+            password: this.admin.password
+          }
+        });
+        await this.$auth.$storage.setCookie("auth-user", {
+          username: admin.username
+        });
+        await this.$auth.$storage.setCookie("auth-token", admin.token);
+        this.$toast.success("Successfully signed in");
+        this.$router.push("/admin/dashboard");
       } catch (err) {
+        console.log(err.response);
         this.$toast.error(err);
       }
     },

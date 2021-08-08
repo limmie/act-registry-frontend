@@ -5,6 +5,7 @@ input, textarea, select, button
 
 .default-button
   @include flex(row, center, center)
+  display: inline-flex
   @include defaultHover
   background-color: $secondaryColor
   color: $whiteColor
@@ -38,3 +39,11 @@ input, textarea, select, button
     @include defaultPadding
     background-color: $whiteColor
     border-radius: 5px
+
+.default-form-wrapper
+  h1
+    margin-bottom: 1rem
+
+.default-form
+  @include flex(column, flex-start, flex-start)
+  gap: 1rem

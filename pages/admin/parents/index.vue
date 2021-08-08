@@ -1,9 +1,9 @@
 <template>
   <main>
     <div class="admin-page-wrapper">
-      <nuxt-link to="/admin/guardianships/add">
+      <nuxt-link to="/admin/parents/add">
         <div class="default-button">
-          <span>Add guardianship authority</span>
+          <span>Add Parent</span>
         </div>
       </nuxt-link>
 

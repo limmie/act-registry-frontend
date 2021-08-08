@@ -1,20 +1,30 @@
 <template>
   <main>
-    <div class="table-wrapper">
-      <h1 id="table-title">{{ $t("civils") }}</h1>
-      <table>
-        <tr>
-          <th v-for="(key, index) in tableKeys" :key="index">{{ key.name }}</th>
-        </tr>
+    <div class="admin-page-wrapper">
+      <nuxt-link to="/admin/hospitals/add">
+        <div class="default-button">
+          <span>Add hospital</span>
+        </div>
+      </nuxt-link>
 
-        <tr v-for="(row, index) in data" :key="index">
-          <td>{{ row.id }}</td>
-          <td>{{ row.motherFirstName }}</td>
-          <td>{{ row.motherLastName }}</td>
-          <td>{{ row.motherPatronymic }}</td>
-          <td>{{ row.birthDay }}</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <h1 id="table-title">{{ $t("civils") }}</h1>
+        <table>
+          <tr>
+            <th v-for="(key, index) in tableKeys" :key="index">
+              {{ key.name }}
+            </th>
+          </tr>
+
+          <tr v-for="(row, index) in data" :key="index">
+            <td>{{ row.id }}</td>
+            <td>{{ row.motherFirstName }}</td>
+            <td>{{ row.motherLastName }}</td>
+            <td>{{ row.motherPatronymic }}</td>
+            <td>{{ row.birthDay }}</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </main>
 </template>

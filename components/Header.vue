@@ -24,7 +24,7 @@
             <nuxt-link to="/blog">{{ $t("blog") }}</nuxt-link>
           </div>
           <div class="header-nav-item">
-            <nuxt-link to="/blog">{{ $t("questionsAndAnswers") }}</nuxt-link>
+            <nuxt-link to="/QA">{{ $t("questionsAndAnswers") }}</nuxt-link>
           </div>
           <div class="header-nav-item">
             <nuxt-link to="/parent/login">

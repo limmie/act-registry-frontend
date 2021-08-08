@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="admin-page-wrapper">
-      <nuxt-link to="/admin/guardianships/add">
+    <div id="admin-registry-offices" class="admin-page-wrapper">
+      <nuxt-link to="/admin/registry-offices/add">
         <div class="default-button">
-          <span>Add guardianship authority</span>
+          <span>Add registry office</span>
         </div>
       </nuxt-link>
 
@@ -26,7 +26,7 @@
             <td>{{ row.name }}</td> 
           </tr>
         </table>
-      </div>
+      </div>  
     </div>
   </main>
 </template>
